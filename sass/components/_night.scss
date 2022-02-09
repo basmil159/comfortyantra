@@ -1,0 +1,25 @@
+.night {
+  height: 90vh;
+  // width: 98.7vw;
+  background-image: linear-gradient(to right bottom, #678c89cc, #009494cc),
+    url(../../images/mainbg.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+  &__surface {
+    height: 40rem;
+    width: 13000vw;
+    background: url(../../images/background.png);
+    /* display: block; */
+    background-size: contain;
+    position: absolute;
+    z-index: 99;
+    bottom: 16.8rem;
+    left: 0;
+    background-repeat: repeat-x;
+    backface-visibility: hidden;
+    animation: moveright 20s linear 2s infinite;
+  }
+}

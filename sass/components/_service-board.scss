@@ -1,0 +1,65 @@
+.service-board {
+  height: 12.4rem;
+  width: MAX-CONTENT;
+  bottom: -8.1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0 5px;
+  font-size: 5rem;
+  margin: 0;
+  position: relative;
+
+  backface-visibility: hidden;
+  animation: moveInUp 1s ease-out;
+
+  &__designing,
+  &__development,
+  &__marketing,
+  &__data {
+    position: relative;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+  }
+  &__designing {
+    left: 90vw;
+  }
+  &__development {
+    left: 160vw;
+  }
+  &__marketing {
+    left: 250vw;
+  }
+  &__data {
+    left: 340vw;
+  }
+
+  h2 {
+    position: RELATIVE;
+    bottom: -16.1rem;
+    display: inline-block;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    font-family: -webkit-pictograph;
+    font-weight: 100;
+    background: #124344;
+    z-index: 9;
+    color: #fae7b6;
+    border: 2px solid #fae7b6;
+  }
+
+  &__rod {
+    height: 8rem;
+    width: 1rem;
+    position: ABSOLUTE;
+    background: #022b31;
+    left: 50%;
+    bottom: -19.5rem;
+    display: inline-block;
+  }
+}

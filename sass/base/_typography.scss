@@ -1,0 +1,111 @@
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.5;
+  color: $color-grey-dark;
+}
+
+.heading-primary {
+  text-align: center;
+  width: max-content;
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden; /*it fixes a shaking animation. Simple hack*/ /* But its actual use is to hade the visiblitiy of back part of the elements*/
+  margin-bottom: 6rem;
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* animation-delay: 3s; */
+    /* animation-iteration-count: 3; */
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
+  }
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.58rem;
+    animation: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
+  }
+}
+
+.heading-secondary {
+  text-transform: uppercase;
+
+  &--main {
+    line-height: 1.3;
+    padding: 1rem;
+    color: #232323;
+    text-align: center;
+    font-size: 5.6rem;
+    font-weight: 800;
+
+    letter-spacing: -0.1rem;
+    @include respond(tab-port) {
+      font-size: 4.5rem;
+    }
+
+    @include respond(phone) {
+      font-size: 3.5rem;
+    }
+    &--white {
+      color: #fff;
+      letter-spacing: -0.2rem;
+    }
+  }
+  &--sub {
+    text-align: center;
+    display: block;
+    font-weight: 100;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.17rem;
+    color: $color-grey-dark;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
+
+    &--white {
+      color: #fff;
+      letter-spacing: 0.7rem;
+    }
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: $color-grey-dark-3;
+  text-transform: uppercase;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-family: Montserrat, sans-serif;
+}
+.paragraph {
+  font-size: $default-font-size;
+  letter-spacing: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

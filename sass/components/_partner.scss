@@ -1,0 +1,20 @@
+.partner {
+  max-width: 1000px;
+  display:flex;
+  position: relative;
+  margin: auto;
+  justify-content: space-between;
+  transition: all 0.6s ease;
+
+  &__slide {
+    display: none;
+    
+  -webkit-animation: fade 1.5s;
+  animation: fade 1.5s;
+  
+    img{
+      width:15rem;
+      vertical-align: middle;
+    }
+  }
+}

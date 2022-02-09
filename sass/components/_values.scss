@@ -1,0 +1,16 @@
+.values {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem;
+
+  &__icon {
+    width: 6.4rem;
+    height: 6.4rem;
+    opacity: 0.9;
+    margin: 0px auto;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+  }
+}

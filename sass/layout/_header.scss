@@ -1,0 +1,132 @@
+.header {
+  margin: 0;
+  background-color: #000;
+  height: 89.8vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    z-index: 9;
+  }
+
+  &__logo {
+    height: 7.5rem;
+  }
+
+  &__text-box {
+    position: absolute;
+    z-index: 9;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__car {
+    position: absolute;
+    bottom: 16rem;
+    height: 11.5rem;
+    width: 27.6rem;
+    z-index: 99999;
+    /* left: -20%; */
+    animation: suspension 1s linear infinite;
+
+    img {
+      animation: moveInLeft 1s ease-out;
+    }
+  }
+
+  &__road {
+    bottom: 0px;
+    position: absolute;
+    height: 17rem;
+    width: 100vw;
+    background: #000;
+    background: linear-gradient(180deg, #022b31 0%, rgb(0, 9, 10) 100%);
+  }
+  &__hire {
+    animation: suspension 1s linear infinite;
+    position: absolute;
+    left: 6.5rem;
+    /* bottom: 2rem; */
+    bottom: 21.5rem;
+    z-index: 99999;
+
+    &--hire-us {
+      width: max-content;
+      position: absolute;
+      text-align: center;
+      font-size: 1.8rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #88e9e993;
+      animation: moveInRight 1s ease-out;
+      /* display: flex; */
+      /* align-content: center; */
+      /* justify-content: center; */
+    }
+  }
+
+  &__shape {
+    bottom: 9.8vh;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    direction: ltr;
+
+    svg {
+      height: 2.5rem;
+      display: block;
+      width: calc(100% + 1.3px);
+      position: relative;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+
+    &--fill {
+      fill: rgb(255, 255, 255);
+      -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+      transform: rotateY(360deg);
+    }
+  }
+
+  &__down-button {
+    bottom: calc(9vh + 2rem);
+    /* background: url(../images/lander-down.png); */
+    background: transparent;
+    height: 4.5rem;
+    border-radius: 40%;
+    /* overflow: hidden; */
+    position: absolute;
+    line-height: 0;
+    /* height: 2.5rem; */
+    /* direction: ltr; */
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+  }
+  &__down-button img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__down-icon {
+    position: absolute;
+    fill: rgb(3, 3, 3);
+    left: -0.9rem;
+    top: 3.7rem;
+    height: 2rem;
+    width: 2rem;
+    z-index: 99;
+    animation: suspension 1s linear infinite;
+    transition: all 1s ease-out;
+  }
+}
