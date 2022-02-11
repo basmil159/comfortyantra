@@ -1,0 +1,353 @@
+/* normalize css */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: initial;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+  z-index: 1000;
+}
+.header__logo {
+  height: 7.5rem;
+}
+
+header {
+  margin: 0;
+  background-color: #000;
+  height: 89.8vh;
+  overflow: hidden;
+}
+.night {
+  height: 90vh;
+  width: 100vw;
+  /*border: 1px solid #000;*/
+  /* margin: 5rem auto; */
+  background-image: linear-gradient(
+      to right bottom,
+      rgb(103 140 137 / 80%),
+      rgb(0 148 148 / 80%)
+    ),
+    url(./assets/mainbg.png);
+  background-size: cover;
+  position: relative;
+  box-shadow: 1px 2px 60px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+.elementor-shape svg {
+  height: 2.5rem;
+  display: block;
+  width: calc(100% + 1.3px);
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.elementor-shape {
+  bottom: 10vh;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  direction: ltr;
+}
+
+.elementor-shape .elementor-shape-fill {
+  fill: rgb(255, 255, 255);
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  /* transform-origin: center; */
+  /* -webkit-transform: rotateY(
+0deg
+); */
+  transform: rotateY(360deg);
+}
+
+.surface {
+  height: 20.5rem;
+  width: 1000vw;
+  background: url(./assets/background.png);
+  /* display: block; */
+  background-size: contain;
+  position: absolute;
+  z-index: 99;
+  bottom: 16.8rem;
+  left: 0;
+  background-repeat: repeat-x;
+  animation: moveright 11.5s linear 2s infinite;
+}
+.car {
+  position: absolute;
+  bottom: 16rem;
+  height: 11.5rem;
+  width: 27.6rem;
+  z-index: 99999;
+  /* left: -20%; */
+  animation: suspension 1s linear infinite;
+}
+
+.car img {
+  animation: moveInLeft 1s ease-out;
+}
+.road {
+  bottom: 0px;
+  position: absolute;
+  height: 17rem;
+  width: 100vw;
+  background: #000;
+  background: linear-gradient(180deg, #022b31 0%, rgb(0, 9, 10) 100%);
+}
+.services {
+  height: 15.4rem;
+  width: MAX-CONTENT;
+  bottom: -8.1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0 5px;
+  font-size: 5rem;
+  margin: 0;
+  position: relative;
+  animation: moveInUp 1s ease-out;
+}
+.designing,
+.development,
+.marketing,
+.data {
+  position: relative;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+}
+.designing {
+  left: 110%;
+}
+.development {
+  left: 200%;
+}
+.marketing {
+  left: 300%;
+}
+.data {
+  left: 400%;
+}
+
+h2 {
+  position: RELATIVE;
+  bottom: 61px;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 30px;
+  font-family: -webkit-pictograph;
+  font-weight: 600;
+  background: #124344;
+  z-index: 9;
+  color: #fae7b6;
+  border: 2px solid #fae7b6;
+}
+
+.rod {
+  height: 8rem;
+  width: 1rem;
+  position: ABSOLUTE;
+  background: #022b31;
+  left: 50%;
+  bottom: 2.5rem;
+  display: inline-block;
+}
+
+.hire {
+  animation: suspension 1s linear infinite;
+  position: absolute;
+  left: 6.5rem;
+  /* bottom: 2rem; */
+  bottom: 21.5rem;
+  z-index: 99999;
+}
+.hire-us {
+  width: max-content;
+  position: absolute;
+  text-align: center;
+  font-size: 1.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #88e9e993;
+  animation: moveInRight 1s ease-out;
+  /* display: flex; */
+  /* align-content: center; */
+  /* justify-content: center; */
+}
+.header__text-box {
+  position: absolute;
+  z-index: 9;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.heading-primary {
+  text-align: center;
+  width: max-content;
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /*it fixes a shaking animation. Simple hack*/
+  /* But its actual use is to hade the visiblitiy of back part of the elements*/
+  margin-bottom: 6rem;
+}
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  /* animation-delay: 3s; */
+  /* animation-iteration-count: 3; */
+}
+@media only screen and (max-width: 37.5em) {
+  .heading-primary--main {
+    letter-spacing: 1rem;
+    font-size: 5rem;
+  }
+}
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1.58rem;
+  animation: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heading-primary--main {
+    letter-spacing: 1rem;
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heading-primary--sub {
+    letter-spacing: 0.5rem;
+  }
+}
+
+.down__button {
+  bottom: calc(9vh + 2rem);
+  /* background: url(../images/lander-down.png); */
+  background: transparent;
+  height: 4.5rem;
+  border-radius: 40%;
+  /* overflow: hidden; */
+  position: absolute;
+  line-height: 0;
+  /* height: 2.5rem; */
+  /* direction: ltr; */
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+}
+.down__button img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.down__icon {
+  position: absolute;
+  fill: rgb(3, 3, 3);
+  left: -0.9rem;
+  top: 3.7rem;
+  height: 2rem;
+  width: 2rem;
+  z-index: 99;
+  animation: suspension 1s linear infinite;
+  transition: all 1s ease-out;
+}
+/*Animation*/
+@keyframes moveright {
+  100% {
+    transform: translateX(-5150px);
+  }
+}
+
+@keyframes suspension {
+  100% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  0% {
+    transform: translateY(-1px);
+  }
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(2rem);
+  }
+  100% {
+    opacity: +1;
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes moveInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
