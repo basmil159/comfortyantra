@@ -12,7 +12,8 @@
 
 html {
   font-size: 62.5%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+ Arial, sans-serif, sans-serif; }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
@@ -312,7 +313,7 @@ body {
 
 .night {
   height: 90vh;
-  background-image: linear-gradient(to right bottom, #678c89cc, #009494cc), url(../../images/mainbg.png);
+  background-image: linear-gradient(to right bottom, #678c89cc, #009494cc), url(../images/mainbg.png);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -320,7 +321,7 @@ body {
   .night__surface {
     height: 40rem;
     width: 13000vw;
-    background: url(../../images/background.png);
+    background: url(../images/background.png);
     /* display: block; */
     background-size: contain;
     position: absolute;
@@ -800,11 +801,14 @@ body {
   .row .col-1-of-4 {
     width: calc((100% - 3 *6rem) / 4); }
   .row .col-2-of-3 {
-    width: calc( 2 * ((100% - 2 *6rem) / 3) + 6rem); }
+    width: calc(
+ 2 * ((100% - 2 *6rem) / 3) + 6rem); }
   .row .col-3-of-4 {
-    width: calc( 3 * ((100% - 3 *6rem) / 4) + 2 *6rem); }
+    width: calc(
+ 3 * ((100% - 3 *6rem) / 4) + 2 *6rem); }
   .row .col-2-of-4 {
-    width: calc( 2 * ((100% - 3 *6rem) / 4) + 6rem); }
+    width: calc(
+ 2 * ((100% - 3 *6rem) / 4) + 6rem); }
 
 .footer {
   background-color: #333;
