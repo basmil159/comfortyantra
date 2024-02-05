@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Google Maps Plus Code</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #plusCodeResult {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body style="width: 100vw; height:100vh; display:flex; align-items:center; justify-content:center;">
+<div style="max-width:500px">
+  
+  <label for="latitude">Latitude:</label>
+  <input type="text" id="latitude" placeholder="Enter latitude">
+
+  <label for="longitude">Longitude:</label>
+  <input type="text" id="longitude" placeholder="Enter longitude">
+
+  <button onclick="getPlusCode()">Get Plus Code</button>
+
+  <div id="plusCodeResult"></div>
+
+  <script>
+    function getPlusCode() {
+      var latitudeInput = document.getElementById('latitude').value;
+      var longitudeInput = document.getElementById('longitude').value;
+      // Validate latitude and longitude inputs
+      if (latitudeInput.trim() === '' || longitudeInput.trim() === '') {
+        alert('Please enter valid latitude and longitude values.');
+        return;
+      }
+      var lat = parseFloat(latitudeInput);
+      var long = parseFloat(longitudeInput);
+      // Use the Geocoder service to get the plus code for the specified location
+      let email = "abc@test.com";
+      let ApiURL = `https://plus.codes/api?address=${lat},${long}&email=${email}`;
+      fetch(ApiURL)
+        .then(response => {
+          console.log("Result: ", response);
+
+          return response.json();
+        })
+        .then(json => {
+          console.log("JSON: ", json);
+         document.getElementById('plusCodeResult').textContent = 'Plus Code: ' + json?.plus_code?.global_code;
+        })
+        .catch(error => {
+          console.error("Error: ", error);
+        });
+    }
+  </script>
+
+</div>
+</body>
+
+</html>
